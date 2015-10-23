@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Validering</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="content">
+            <h1 class="gamesHeader">Validering</h1>
+            <form id="form">
+                <div class="inputMindre">
+                    <span>Email:</span>
+                    <input id="emailBox" type="email" required />
+                </div>
+                <div class="inputMindre">
+                    <span>Förnamn:</span>
+                    <input id="firstNameBox" type="text" required />
+                </div>
+                <div class="inputMindre">
+                    <span>Telefon nr:</span>
+                    <input id="phoneNumber" type="text" required />
+                </div>
+                <button id="continuebutton">Fortsätt</button>
+            </form>
+        </div>
+        <div id="error">
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="js/validering.js"></script>
+    </div>
+</body>
+
+</html>
