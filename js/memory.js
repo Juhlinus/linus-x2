@@ -7,126 +7,172 @@ $(function() {
                 "boll4", "boll4", 
                 "boll5", "boll5"];
                 
-    myArray = shuffle(myArray);
+    // myArray = shuffle(myArray);
     
     // console.log(myArray);
     
-    var temp = 0;
+    function doABarrelRoll(myArray, bakgrund) {
     
-    for (var i = 0; i < 2; i++) {
+        var temp = 0;
         
-        // <tr>
-        $("tbody").append("<tr>");
-        
-        // console.log("<tr>");
-        
-        for (var j = temp; j < myArray.length; j += 1) {
-            // <td class="stuff"></td>
-        
-            //var tempElement = $("tr").append("td");
+        for (var i = 0; i < 2; i++) {
             
-            $("tbody").append("<td>");
+            // <tr>
+            $("tbody").append("<tr>");
             
-            // console.log("<td>");
+            // console.log("<tr>");
             
-            $("td").last().addClass("bakgrund " + myArray[j]);
-            //tempElement.addClass("bakgrund " + myArray[i]);    
-        
-            //$("td").last().addClass(myArray[j]);
-        
-            // console.log("</td>");
-        
-            $("tbody").append("</td>");
-        
-            if (j === 3)
-                break;
+            for (var j = temp; j < myArray.length; j += 1) {
+                // <td class="stuff"></td>
+            
+                //var tempElement = $("tr").append("td");
                 
-            //temp = j;
+                $("tbody").append("<td>");
+                
+                // console.log("<td>");
+                
+                // $("td").last().addClass("bakgrund " + myArray[j]);
+                //tempElement.addClass("bakgrund " + myArray[i]);    
+            
+                if (bakgrund)
+                    $("td").last().addClass("bakgrund " + myArray[j]);
+                else
+                    $("td").last().addClass(myArray[j]);
+            
+                // console.log("</td>");
+            
+                $("tbody").append("</td>");
+            
+                if (j === 3)
+                    break;
+                    
+                //temp = j;
+                temp++;
+            }
+            
+            $("tbody").append("</tr>");
+            
+            // console.log("</tr>");
+            
+            // </tr>
             temp++;
         }
         
-        $("tbody").append("</tr>");
-        
-        // console.log("</tr>");
-        
-        // </tr>
-        temp++;
     }
     
-    var onTimeout = false;
+    doABarrelRoll(myArray, false);
     
-    /*
+    var onTimeout = true;
+    
+    var wins = 0;
+    
     setTimeout(function() {
         
         $("td").each(function() {
             
-            $(this).toggleClass("flip");
+            $(this).addClass("bakgrund");
         });
+        
+        console.log("timeout is false");
+        
+        doNext();
+        
+    }, 1500);
+    
+    function doNext() {
+    
+        myArray = shuffle(myArray);
+        
+        $("tbody").html("");
+        
+        doABarrelRoll(myArray, true);
         
         onTimeout = false;
         
-    }, 500);
-    */
-    // On click remove background
-    $(".bakgrund").click(function() {
-        
-        if (onTimeout || $(this).hasClass("done"))
-        {
-            event.preventDefault();
-            return;
-        }
-        
-        $(this).removeClass("bakgrund");
-        
-        $(this).attr("value", "1");
-        
-        var parentElement = $(this);
-        
-        $("td").each(function() {
+        // On click remove background
+        $("td").click(function() {
             
-            var childElement = $(this);
+            console.log("click");
             
-            if (childElement.hasClass("done"))
-                return true;
+            if (onTimeout || $(this).hasClass("done"))
+            {
+                event.preventDefault();
+                return;
+            }
             
-            // If it does not contain class
-            if (!childElement.hasClass("bakgrund")) {
+            $(this).removeClass("bakgrund");
+            
+            $(this).attr("value", "1");
+            
+            var parentElement = $(this);
+            
+            $("td").each(function() {
                 
-                if (childElement.attr("value") === undefined)
-                {
+                var childElement = $(this);
+                
+                if (childElement.hasClass("done"))
+                    return true;
+                
+                // If it does not contain class
+                if (!childElement.hasClass("bakgrund")) {
                     
-                    if (childElement.attr("class") === parentElement.attr("class"))
+                    if (childElement.attr("value") === undefined)
                     {
-                        childElement.addClass("done");
-                        parentElement.addClass("done");
                         
-                        childElement.css("border", "5px solid green");
-                        parentElement.css("border", "5px solid green");
-                    }
-                    else
-                    {
-                        childElement.css("border", "5px solid red");
-                        parentElement.css("border", "5px solid red");
-                        
-                        onTimeout = true;
-                        
-                        setTimeout(function() {
-                            childElement.addClass("bakgrund");
-                            parentElement.addClass("bakgrund");
+                        if (childElement.attr("class") === parentElement.attr("class"))
+                        {
+                            wins += 1;
                             
-                            childElement.css("border", "1px solid black");
-                            parentElement.css("border", "1px solid black");
+                            childElement.addClass("done");
+                            parentElement.addClass("done");
                             
-                            onTimeout = false;
-                        }, 1000);
+                            childElement.removeClass("invalid");
+                            parentElement.removeClass("invalid");
+                            
+                            childElement.addClass("valid");
+                            parentElement.addClass("valid");
+                            
+                            if (wins === 4)
+                                var audioRight = new Audio('sound/win.mp3');
+                            else
+                                var audioRight = new Audio('sound/right.mp3');
+                                
+                            audioRight.play();
+                            
+                        }
+                        else
+                        {
+                            childElement.removeClass("valid");
+                            parentElement.removeClass("valid");
+                            
+                            childElement.addClass("invalid");
+                            parentElement.addClass("invalid");
+                            
+                            var audioLose = new Audio('sound/fail.mp3');
+                            audioLose.play();
+                            
+                            onTimeout = true;
+                            
+                            setTimeout(function() {
+                            
+                                childElement.removeClass("invalid");
+                                parentElement.removeClass("invalid");
+                                
+                                childElement.addClass("bakgrund");
+                                parentElement.addClass("bakgrund");
+                                
+                                onTimeout = false;
+                            }, 1000);
+                        }
                     }
                 }
-            }
+            });
+            
+            $(this).removeAttr("value");
+            // $(this).attr("value", "1");
         });
         
-        $(this).removeAttr("value");
-        // $(this).attr("value", "1");
-    });
+    }
                 
     function shuffle(array) {
         
