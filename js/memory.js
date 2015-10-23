@@ -66,6 +66,8 @@ $(function() {
     
     var wins = 0;
     
+    var myAudio = new Audio();
+    
     setTimeout(function() {
         
         $("td").each(function() {
@@ -132,12 +134,21 @@ $(function() {
                             childElement.addClass("valid");
                             parentElement.addClass("valid");
                             
+                            myAudio.pause();
+                            myAudio.currentTime = 0;
+                            
                             if (wins === 4)
-                                var audioRight = new Audio('sound/win.mp3');
+                            {
+                                // var audioRight = new Audio('sound/win.mp3');
+                                myAudio.src = "sound/win.mp3";
+                            }
                             else
-                                var audioRight = new Audio('sound/right.mp3');
-                                
-                            audioRight.play();
+                            {
+                                myAudio.src = "sound/right.mp3";
+                                // var audioRight = new Audio('sound/right.mp3');
+                            }
+                            
+                            myAudio.play();
                             
                         }
                         else
@@ -148,8 +159,15 @@ $(function() {
                             childElement.addClass("invalid");
                             parentElement.addClass("invalid");
                             
-                            var audioLose = new Audio('sound/fail.mp3');
-                            audioLose.play();
+                            // var audioLose = new Audio('sound/fail.mp3');
+                            // audioLose.play();
+                            
+                            myAudio.pause();
+                            myAudio.currentTime = 0;
+                            
+                            myAudio.src = "sound/fail.mp3";
+                            
+                            myAudio.play();
                             
                             onTimeout = true;
                             
