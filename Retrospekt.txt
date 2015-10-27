@@ -1,0 +1,19 @@
+Vad var bra?
+
+Kommunikationen är fortfarande bra inom gruppen.
+Hjälper varandra och vågar säga ifrån ifall man har fastnat.
+Bra balans.
+Tid över till att lägga till mindre extra features så som att det inte går att 
+klicka på andra bilder medans man har några bilder "rätt vända". 
+Och en "börja spelet"-knapp
+
+
+Vad gick mindre bra?
+
+Småproblem som ställde till det lite, men det löste sig inom tidsramen. 
+
+
+Vad kan vi förbättra?
+
+Påbörja lite fler tasks, så länge de inte är beroende av de som håller på att byggas.
+Fick in vår nya rekryt lite mer, men vi kan alltid bli bättre på det.

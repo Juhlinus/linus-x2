@@ -1,108 +1,537 @@
+
+
+body{
+		background-image: url("../pic/seamlessbg.jpg");
+}
 img {
-    border:1px solid black;
-    width:75px;
-    height:75px;
-    border-radius:10px;
+	border: 1px solid black;
+	width: 75px;
+	height: 75px;
+	border-radius: 10px;
 }
 
 th {
-    font-family:cursive;
+	font-family: cursive;
+}
+button {
+	font-family: Helvetica;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 4px;
 }
 
-button{
-    font-family: Helvetica;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 4px;
-    
+.boll {
+	width: 75px;
+	height: 75px;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	border: 1px solid black;
+	background-size: contain;
 }
 
 
-
+/*
 .boll2 {
-    background-image:url("../pic/boll2.jpg");
-    width:75px;
-    height:75px;
-    background-repeat:no-repeat;
-    border-radius:10px; 
-    border:1px solid black; 
-    background-size:contain;
+    background-image: url("../pic/boll2.jpg");
 }
-
-
-
 
 .boll3 {
-    background-image:url("../pic/images.jpg");
-    width:75px;
-    height:75px;
-    background-repeat:no-repeat;
-    border-radius:10px; 
-    border:1px solid black; 
-    background-size:contain;
+    background-image: url("../pic/images.jpg");
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-size: contain;
 }
 
 .boll4 {
-    background-image:url("../pic/NP300-T.jpg");
-    width:75px;
-    height:75px;
-    background-repeat:no-repeat;
-    border-radius:10px; 
-    border:1px solid black; 
-    background-size:contain;
+    background-image: url("../pic/NP300-T.jpg");
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-size: contain;
 }
 
 .boll5 {
-    background-image:url("../pic/putin.png");
-    width:75px;
-    height:75px;
-    background-repeat:no-repeat;
-    border-radius:10px; 
-    border:1px solid black; 
-    background-size:contain;
+    background-image: url("../pic/putin.png");
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-size: contain;
 }
+*/
 
+
+/*
 .bakgrund {
-    width:75px;
-    height:75px;
-    border-radius:10px;
-    background-repeat:no-repeat;
-    border:1px solid black;
-    background-image:url("../pic/bakgrund.png");
-    background-size:contain;
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    background-image: url("../pic/bakgrund.png");
+    background-size: contain;
 }
+*/
 
 .backgrund:active {
-    border:10px solid black;
+	border: 10px solid black;
 }
 
 th {
-    margin-left:auto;
-    margin-right:auto;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 22px;
 }
 
 #articlen {
-    padding:100px;
-    margin-left:120px;
-    margin-top:60px;
-    width:600px;
-    height:auto;
-    background-color:rgb(235,235,235);
-    border-radius:10px;
-    border:3px solid gray;
+	padding: 100px;
+	margin:auto;
+	margin-top: 20px;
+	width: 800px;
+	height: auto;
+	background-color: rgb(235, 235, 235);
+	border-radius: 10px;
+	border: 3px solid gray;
 }
 
 table {
-    margin-left:auto;
-    margin-right:auto;
-    padding:50px;
-}
-.valid{
-    box-shadow:0 0 0 3px green inset;
-}
-.invalid{
-
-    box-shadow: 0 0 0 3px red inset;
+	/*margin-left: auto;
+    margin-right: auto;
+    */
+	padding: 50px;
 }
 
+.valid {
+	box-shadow: 0 0 0 3px green inset;
+}
+
+.invalid {
+	box-shadow: 0 0 0 3px red inset;
+}
+
+.selected {
+	box-shadow: 0 0 0 3px cyan inset;
+}
+
+.boll1 {
+	background-image: url('../pic/boll1.jpg');
+	width: 75px;
+	height: 75px;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	border: 1px solid black;
+	background-size: contain;
+}
+
+.boll2 {
+	background-image: url('../pic/boll2.jpg');
+}
+
+.boll3 {
+	background-image: url('../pic/boll3.jpg');
+}
+
+.boll4 {
+	background-image: url('../pic/boll4.jpg');
+}
+
+.boll5 {
+	background-image: url('../pic/boll5.jpg');
+}
+
+.boll6 {
+	background-image: url('../pic/boll6.jpg');
+}
+
+.boll7 {
+	background-image: url('../pic/boll7.jpg');
+}
+
+.boll8 {
+	background-image: url('../pic/boll8.jpg');
+}
+
+.boll9 {
+	background-image: url('../pic/boll9.jpg');
+}
+
+.boll10 {
+	background-image: url('../pic/boll10.jpg');
+}
+
+.boll11 {
+	background-image: url('../pic/boll11.jpg');
+}
+
+.boll12 {
+	background-image: url('../pic/boll12.jpg');
+}
+
+.boll13 {
+	background-image: url('../pic/boll13.jpg');
+}
+
+.boll14 {
+	background-image: url('../pic/boll14.jpg');
+}
+
+.boll15 {
+	background-image: url('../pic/boll15.jpg');
+}
+
+.boll16 {
+	background-image: url('../pic/boll16.jpg');
+}
+
+.boll17 {
+	background-image: url('../pic/boll17.jpg');
+}
+
+.boll18 {
+	background-image: url('../pic/boll18.jpg');
+}
+
+.boll19 {
+	background-image: url('../pic/boll19.jpg');
+}
+
+.boll20 {
+	background-image: url('../pic/boll20.jpg');
+}
+
+.boll21 {
+	background-image: url('../pic/boll21.jpg');
+}
+
+.boll22 {
+	background-image: url('../pic/boll22.jpg');
+}
+
+.boll23 {
+	background-image: url('../pic/boll23.jpg');
+}
+
+.boll24 {
+	background-image: url('../pic/boll24.jpg');
+}
+
+.boll25 {
+	background-image: url('../pic/boll25.jpg');
+}
+
+.boll26 {
+	background-image: url('../pic/boll26.jpg');
+}
+
+.boll27 {
+	background-image: url('../pic/boll27.jpg');
+}
+
+.boll28 {
+	background-image: url('../pic/boll28.jpg');
+}
+
+.boll29 {
+	background-image: url('../pic/boll29.jpg');
+}
+
+.boll30 {
+	background-image: url('../pic/boll30.jpg');
+}
+
+.boll31 {
+	background-image: url('../pic/boll31.jpg');
+}
+
+.boll32 {
+	background-image: url('../pic/boll32.jpg');
+}
+
+.boll33 {
+	background-image: url('../pic/boll33.jpg');
+}
+
+.boll34 {
+	background-image: url('../pic/boll34.jpg');
+}
+
+.boll35 {
+	background-image: url('../pic/boll35.jpg');
+}
+
+.boll36 {
+	background-image: url('../pic/boll36.jpg');
+}
+
+.boll37 {
+	background-image: url('../pic/boll37.jpg');
+}
+
+.boll38 {
+	background-image: url('../pic/boll38.jpg');
+}
+
+.boll39 {
+	background-image: url('../pic/boll39.jpg');
+}
+
+.boll40 {
+	background-image: url('../pic/boll40.jpg');
+}
+
+.boll41 {
+	background-image: url('../pic/boll41.jpg');
+}
+
+.boll42 {
+	background-image: url('../pic/boll42.jpg');
+}
+
+.boll43 {
+	background-image: url('../pic/boll43.jpg');
+}
+
+.boll44 {
+	background-image: url('../pic/boll44.jpg');
+}
+
+.boll45 {
+	background-image: url('../pic/boll45.jpg');
+}
+
+.boll46 {
+	background-image: url('../pic/boll46.jpg');
+}
+
+.boll47 {
+	background-image: url('../pic/boll47.jpg');
+}
+
+.boll48 {
+	background-image: url('../pic/boll48.jpg');
+}
+
+.boll49 {
+	background-image: url('../pic/boll49.jpg');
+}
+
+.boll50 {
+	background-image: url('../pic/boll50.jpg');
+}
+
+.boll51 {
+	background-image: url('../pic/boll51.jpg');
+}
+
+.boll52 {
+	background-image: url('../pic/boll52.jpg');
+}
+
+.boll53 {
+	background-image: url('../pic/boll53.jpg');
+}
+
+.boll54 {
+	background-image: url('../pic/boll54.jpg');
+}
+
+.boll55 {
+	background-image: url('../pic/boll55.jpg');
+}
+
+.boll56 {
+	background-image: url('../pic/boll56.jpg');
+}
+
+.boll57 {
+	background-image: url('../pic/boll57.jpg');
+}
+
+.boll58 {
+	background-image: url('../pic/boll58.jpg');
+}
+
+.boll59 {
+	background-image: url('../pic/boll59.jpg');
+}
+
+.boll60 {
+	background-image: url('../pic/boll60.jpg');
+}
+
+.boll61 {
+	background-image: url('../pic/boll61.jpg');
+}
+
+.boll62 {
+	background-image: url('../pic/boll62.jpg');
+}
+
+.boll63 {
+	background-image: url('../pic/boll63.jpg');
+}
+
+.boll64 {
+	background-image: url('../pic/boll64.jpg');
+}
+
+.boll65 {
+	background-image: url('../pic/boll65.jpg');
+}
+
+.boll66 {
+	background-image: url('../pic/boll66.jpg');
+}
+
+.boll67 {
+	background-image: url('../pic/boll67.jpg');
+}
+
+.boll68 {
+	background-image: url('../pic/boll68.jpg');
+}
+
+.boll69 {
+	background-image: url('../pic/boll69.jpg');
+}
+
+.boll70 {
+	background-image: url('../pic/boll70.jpg');
+}
+
+.boll71 {
+	background-image: url('../pic/boll71.jpg');
+}
+
+.boll72 {
+	background-image: url('../pic/boll72.jpg');
+}
+
+.boll73 {
+	background-image: url('../pic/boll73.jpg');
+}
+
+.boll74 {
+	background-image: url('../pic/boll74.jpg');
+}
+
+.boll75 {
+	background-image: url('../pic/boll75.jpg');
+}
+
+.boll76 {
+	background-image: url('../pic/boll76.jpg');
+}
+
+.boll77 {
+	background-image: url('../pic/boll77.jpg');
+}
+
+.boll78 {
+	background-image: url('../pic/boll78.jpg');
+}
+
+.boll79 {
+	background-image: url('../pic/boll79.jpg');
+}
+
+.boll80 {
+	background-image: url('../pic/boll80.jpg');
+}
+
+.boll81 {
+	background-image: url('../pic/boll81.jpg');
+}
+
+.boll82 {
+	background-image: url('../pic/boll82.jpg');
+}
+
+.boll83 {
+	background-image: url('../pic/boll83.jpg');
+}
+
+.boll84 {
+	background-image: url('../pic/boll84.jpg');
+}
+
+.boll85 {
+	background-image: url('../pic/boll85.jpg');
+}
+
+.boll86 {
+	background-image: url('../pic/boll86.jpg');
+}
+
+.boll87 {
+	background-image: url('../pic/boll87.jpg');
+}
+
+.boll88 {
+	background-image: url('../pic/boll88.jpg');
+}
+
+.boll89 {
+	background-image: url('../pic/boll89.jpg');
+}
+
+.boll90 {
+	background-image: url('../pic/boll90.jpg');
+}
+
+.boll91 {
+	background-image: url('../pic/boll91.jpg');
+}
+
+.boll92 {
+	background-image: url('../pic/boll92.jpg');
+}
+
+.boll93 {
+	background-image: url('../pic/boll93.jpg');
+}
+
+.boll94 {
+	background-image: url('../pic/boll94.jpg');
+}
+
+.boll95 {
+	background-image: url('../pic/boll95.jpg');
+}
+
+.boll96 {
+	background-image: url('../pic/boll96.jpg');
+}
+
+.boll97 {
+	background-image: url('../pic/boll97.jpg');
+}
+
+.boll98 {
+	background-image: url('../pic/boll98.jpg');
+}
+
+.boll99 {
+	background-image: url('../pic/boll99.jpg');
+}
+
+.boll100 {
+	background-image: url('../pic/boll100.jpg');
+}
+
+.bakgrund {
+	width: 75px;
+	height: 75px;
+	border-radius: 10px;
+	background-repeat: no-repeat;
+	border: 1px solid black;
+	background-image: url("../pic/bakgrund.png");
+	background-size: contain;
+}
 
