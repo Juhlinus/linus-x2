@@ -3,14 +3,25 @@
 body{
 		background-image: url("../pic/seamlessbg.jpg");
 }
-img {
+#container{
+	width: 100%;
+
+}
+
+#memorytext {
+	font-family:fantasy;
+	color:black;
+}
+
+/*img {
 	border: 1px solid black;
 	width: 75px;
 	height: 75px;
 	border-radius: 10px;
-}
+}*/
 
 th {
+	column-span: all;
 	font-family: cursive;
 }
 button {
@@ -91,7 +102,7 @@ th {
 
 #articlen {
 	padding: 100px;
-	margin:auto;
+	margin: auto;
 	margin-top: 20px;
 	width: 800px;
 	height: auto;
